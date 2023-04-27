@@ -1,8 +1,8 @@
-//using CurrieTechnologies.Razor.SweetAlert2;
+using CurrieTechnologies.Razor.SweetAlert2;
 using Hotel;
 using Hotel.Interfaces;
 using Hotel.Servicios;
-//using Radzen;
+using Radzen;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,7 +21,7 @@ builder.Services.AddScoped<IUsuarioServicio, UsuarioServicio>();
 //builder.Services.AddScoped<IDetalleFacturaServicio, DetalleFacturaServicio>();
 //builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
 builder.Services.AddHttpContextAccessor();
-//builder.Services.AddSweetAlert2();
+builder.Services.AddSweetAlert2();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
