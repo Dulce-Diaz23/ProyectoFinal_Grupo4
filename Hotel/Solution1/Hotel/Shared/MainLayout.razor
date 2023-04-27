@@ -1,0 +1,30 @@
+﻿@inherits LayoutComponentBase
+
+<PageTitle>Hotel</PageTitle>
+
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="top-row px-4">
+            <AuthorizeView>
+                <Authorized>
+                    <span class="ml-md-auto">
+                        Usuario Conectado: @context.User.Claims.First().Value
+                        <a href="/account/logout">Salir</a>
+                    </span>
+                </Authorized>
+
+                <NotAuthorized>
+                    <a href="login">Iniciar Sesion</a>
+                </NotAuthorized>
+            </AuthorizeView>
+        </div>
+
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>
