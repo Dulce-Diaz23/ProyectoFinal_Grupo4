@@ -16,4 +16,8 @@
     <ProjectReference Include="..\Modelo\Modelo.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Pages\MisClientes\" />
+  </ItemGroup>
+
 </Project>
