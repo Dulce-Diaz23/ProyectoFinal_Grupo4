@@ -2,11 +2,6 @@
 using Datos.Interfaces;
 using Modelos;
 using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Datos.Repositorios
 {
@@ -32,8 +27,8 @@ namespace Datos.Repositorios
             {
                 using MySqlConnection conexion = Conexion();
                 await conexion.OpenAsync();
-                string sql = @"UPDATE usuario SET Nombre = @Nombre,Contrasena= @Contrasena,Correo= @Correo,
-                             Rol=@Rol,EstaActivo=@EstaActivo WHERE Codigo=@Codigo;";
+                string sql = @"UPDATE usuario SET Nombre = @Nombre,Contrasena= @Contrasena,Correo= @Correo, Rol=@Rol, EstaActivo=@EstaActivo
+                             WHERE Codigo=@Codigo;";
                 resultado = Convert.ToBoolean(await conexion.ExecuteAsync(sql, usuario));
             }
             catch (Exception ex)
@@ -86,7 +81,7 @@ namespace Datos.Repositorios
                 using MySqlConnection conexion = Conexion();
                 await conexion.OpenAsync();
                 string sql = "SELECT * FROM usuario WHERE Codigo = @Codigo; ";
-                
+
                 user = await conexion.QueryFirstAsync<Usuario>(sql, new { codigo });
             }
             catch (Exception ex)
@@ -102,8 +97,8 @@ namespace Datos.Repositorios
             {
                 using MySqlConnection conexion = Conexion();
                 await conexion.OpenAsync();
-                string sql = @"INSERT INTO usuario (Codigo,Nombre,Contrasena,Correo,Rol,EstaActivo) 
-                                VALUES (@Codigo,@Nombre,@Contrasena,@Correo,@Rol,@EstaActivo);";
+                string sql = @"INSERT INTO usuario (Codigo,Nombre,Contrasena,Correo,Rol,FechaCreacion,EstaActivo) 
+                                VALUES (@Codigo,@Nombre,@Contrasena,@Correo,@Rol,@FechaCreacion,@EstaActivo);";
                 resultado = Convert.ToBoolean(await conexion.ExecuteAsync(sql, usuario));
             }
             catch (Exception ex)

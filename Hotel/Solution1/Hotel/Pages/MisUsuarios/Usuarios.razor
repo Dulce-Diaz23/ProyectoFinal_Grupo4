@@ -22,6 +22,7 @@
                         <th>Nombre</th>
                         <th>Correo</th>
                         <th>Rol</th>
+                        <th>Fecha Creación</th>
                         <th>Esta Activo</th>
                     </tr>
                 </thead>
@@ -35,6 +36,7 @@
                                 <td>@user.Nombre</td>
                                 <td>@user.Correo</td>
                                 <td>@user.Rol</td>
+                                <th>@user.FechaCreacion</th>
                                 @if (user.EstaActivo)
                                 {
                                     <td>
@@ -59,6 +61,7 @@
                                 <td>@user.Nombre</td>
                                 <td>@user.Correo</td>
                                 <td>@user.Rol</td>
+                                <th>@user.FechaCreacion</th>
                                 @if (user.EstaActivo)
                                 {
                                     <td>

@@ -20,7 +20,7 @@ namespace Hotel.Pages.MisUsuarios
             {
                 return;
             }
-
+            user.FechaCreacion = DateTime.Now;
             bool inserto = await usuarioServicio.Nuevo(user);
 
             if (inserto)
