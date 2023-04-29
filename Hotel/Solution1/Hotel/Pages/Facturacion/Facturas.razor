@@ -1,0 +1,44 @@
+﻿@page "/Facturas"
+@using Modelos
+
+<AuthorizeView Roles="Administrador">
+    <Authorized Context="AuthenticationState">
+        <h2>Lista de Facturas</h2>
+        @if (lista == null)
+        {
+            <p>No existen facturas en el sistema</p>
+        }
+        else
+        {
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>N.Factura</th>
+                        <th>Identidad cliente</th>
+                        <th>Fecha</th>
+                        <th>Codigo Usuario</th>
+                        <th>Subtotal</th>
+                        <th>ISV</th>
+                        <th>Descuento</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Factura fac in lista)
+                    {
+                        <tr style="background-color:red>;">
+                            <td>@fac.Id</td>
+                            <td>@fac.IdentidadCliente</td>
+                            <td>@fac.Fecha</td>
+                            <td>@fac.CodigoUsuario</td>
+                            <td>@fac.SubTotal</td>
+                            <td>@fac.ISV</td>
+                            <td>@fac.Descuento</td>
+                            <td>@fac.Total</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </Authorized>
+</AuthorizeView>
