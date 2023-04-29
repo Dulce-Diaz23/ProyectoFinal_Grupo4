@@ -36,21 +36,21 @@ namespace Datos.Repositorios
             return idFactura;
         }
 
-		public async Task<IEnumerable<Factura>> GetLista()
-		{
-			IEnumerable<Factura> lista = new List<Factura>();
-			try
-			{
-				using MySqlConnection conexion = Conexion();
-				await conexion.OpenAsync();
-				string sql = "SELECT * FROM factura;";
-				lista = await conexion.QueryAsync<Factura>(sql);
-			}
-			catch (Exception ex)
-			{
+        public async Task<IEnumerable<Factura>> GetLista()
+        {
+            IEnumerable<Factura> lista = new List<Factura>();
+            try
+            {
+                using MySqlConnection conexion = Conexion();
+                await conexion.OpenAsync();
+                string sql = "SELECT * FROM factura;";
+                lista = await conexion.QueryAsync<Factura>(sql);
+            }
+            catch (Exception ex)
+            {
 
-			}
-			return lista;
-		}
-	}
+            }
+            return lista;
+        }
+    }
 }
