@@ -3,20 +3,20 @@
 
 <AuthorizeView Roles="Administrador">
     <Authorized Context="AuthenticationState">
-        <h2>Lista de Facturas</h2>
+        <h2 style="color:navy">FACTURAS REGISTRADAS</h2>
         @if (lista == null)
         {
             <p>No existen facturas en el sistema</p>
         }
         else
         {
-            <table class="table">
+            <table class="table table-info">
                 <thead>
                     <tr>
-                        <th>N.Factura</th>
+                        <th>No. Factura</th>
                         <th>Identidad cliente</th>
                         <th>Fecha</th>
-                        <th>Codigo Usuario</th>
+                        <th>Código Usuario</th>
                         <th>Subtotal</th>
                         <th>ISV</th>
                         <th>Descuento</th>

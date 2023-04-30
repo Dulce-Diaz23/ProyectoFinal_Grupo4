@@ -11,7 +11,7 @@
 
             <div class="form-group row">
                 <label for="Codigo" class="col-sm-2 col-form-label">
-                    Codigo
+                    Código:
                 </label>
                 <div class="col-sm-10">
                     <InputText id="Codigo" class="form-control" @bind-Value="user.Codigo" />
@@ -21,7 +21,7 @@
 
             <div class="form-group row">
                 <label for="Nombre" class="col-sm-2 col-form-label">
-                    Nombre
+                    Nombre:
                 </label>
                 <div class="col-sm-10">
                     <InputText id="Nombre" class="form-control" @bind-Value="user.Nombre" />
@@ -31,7 +31,7 @@
 
             <div class="form-group row">
                 <label for="Contrasena" class="col-sm-2 col-form-label">
-                    Contrasena
+                    Contraseña:
                 </label>
                 <div class="col-sm-10">
                     <InputText id="Contrasena" type="password" class="form-control" @bind-Value="user.Contrasena" />
@@ -41,7 +41,7 @@
 
             <div class="form-group row">
                 <label for="Correo" class="col-sm-2 col-form-label">
-                    Correo
+                    Email:
                 </label>
                 <div class="col-sm-10">
                     <InputText id="Correo" class="form-control" @bind-Value="user.Correo" />
@@ -51,7 +51,7 @@
 
             <div class="form-group row">
                 <label for="Rol" class="col-sm-2 col-form-label">
-                    Rol
+                    Rol:
                 </label>
                 <div class="col-sm-10">
                    <InputSelect class="form-control" @bind-Value="user.Rol">
@@ -66,7 +66,7 @@
 
              <div class="form-group row">
                 <label for="EstaActivo" class="col-sm-2 col-form-label">
-                    EstaActivo
+                    Está Activo?
                 </label>
                 <div class="col-sm-10">
                     <InputCheckbox @bind-Value="user.EstaActivo" />
@@ -76,7 +76,7 @@
 
             <div class="form-group row">
                 <p>
-                    <input type="submit" class="btn btn-primary" value="Guardar" @onclick="Guardar" />
+                    <input type="submit" class="btn btn-success" value="Guardar" @onclick="Guardar" />
                     <input type="submit" class="btn btn-danger" value="Cancelar" @onclick="Cancelar" />
                 </p>
             </div>

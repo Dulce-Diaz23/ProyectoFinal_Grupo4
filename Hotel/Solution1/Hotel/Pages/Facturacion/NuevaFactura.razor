@@ -27,11 +27,11 @@
 
 					<div class="col-sm-1">
 						<b>Buscar:</b>
-						<input type="submit" class="btn btn-primary" value="Buscar" @onclick="@BuscarHabitacion" />
+						<input type="submit" class="btn btn-outline-success" value="..." @onclick="@BuscarHabitacion" />
 					</div>
 
 					<div class="col-sm-6">
-						<b>Nombre:</b>
+						<b>Nombre habitación:</b>
 						<InputText readonly id="Nombre" class="form-control" @bind-Value="@habitacion.Nombre" />
 					</div>
 
@@ -42,13 +42,13 @@
 
 					<div class="col-sm-1">
 						<b></b>
-						<input type="submit" class="btn btn-primary" value="Agregar" @onclick="@AgregarHabitacion" />
+						<input type="submit" class="btn btn-success" value="Agregar" @onclick="@AgregarHabitacion" />
 					</div>
 				</div>
 			</div>
 			 <br />
 
-			<table class="table">
+			<table class="table table-success table-striped-columns">
 				<thead>
 					<tr>
 						<th>Código</th>

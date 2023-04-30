@@ -9,7 +9,7 @@
             <DataAnnotationsValidator />
             <div class="from-group row">
                 <label for="Codigo" class="col-sm-2 col-form-label">
-                Código
+                Código:
                 </label>
                 <div class="col-sm-10">
                     @hab.Codigo
@@ -18,7 +18,7 @@
 
                 <div class="from-group row">
                 <label for="Nombre" class="col-sm-2 col-form-label">
-                  Nombre
+                  Nombre:
                 </label>
                 <div class="col-sm-10">
                     <InputText id="Nombre" class="form-control" @bind-Value="hab.Nombre" />
@@ -28,7 +28,7 @@
 
             <div class="from-group row">
                 <label for="Descripcion" class="col-sm-2 col-form-label">
-                  Descripcion
+                    Descripción:
                 </label>
                 <div class="col-sm-10">
                     <InputText id="Descripcion" class="form-control" @bind-Value="hab.Descripcion" />
@@ -38,7 +38,7 @@
 
             <div class="from-group row">
                 <label for="TipoHabitacion" class="col-sm-2 col-form-label">
-                  Tipo de habitación
+                  Tipo de habitación:
                 </label>
                 <div class="col-sm-10">
                     <InputText id="TipoHabitacion" class="form-control" @bind-Value="hab.TipoHabitacion" />
@@ -48,7 +48,7 @@
 
             <div class="from-group row">
                 <label for="Existencia" class="col-sm-2 col-form-label">
-                    Existencia
+                    Existencia:
                 </label>
                 <div class="col-sm-10">
                     <InputNumber id="Existencia" class="form-control" @bind-Value="hab.Existencia" />
@@ -57,7 +57,7 @@
 
             <div class="from-group row">
                 <label for="Precio" class="col-sm-2 col-form-label">
-                    Precio
+                    Precio:
                 </label>
                 <div class="col-sm-10">
                     <InputNumber id="Precio" class="form-control" @bind-Value="hab.Precio" />
@@ -88,7 +88,7 @@
             <div class="from-group row">
                 <p>
                     <input type="submit" class="btn btn-primary" value="Guardar" @onclick="Guardar" />
-                    <input type="submit" class="btn btn-danger" value="Cancelar" @onclick="Cancelar" />
+                    <input type="submit" class="btn btn-warning" value="Cancelar" @onclick="Cancelar" />
                     <input type="submit" class="btn btn-danger" value="Eliminar" @onclick="Eliminar" />
                 </p>
             </div>

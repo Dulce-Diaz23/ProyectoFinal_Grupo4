@@ -1,6 +1,6 @@
 ﻿<div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="">Hotel</a>
+        <a class="oi oi-star" style="color:Window" href="">StarHotel</a>
         <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -13,7 +13,7 @@
         <AuthorizeView Roles="Administrador, Usuario">
             <Authorized>
                 <div class="nav-item px-3">
-                    <NavLink class="nav-link" style="color:black" href="" Match="NavLinkMatch.All">
+                    <NavLink class="nav-link" style="color:white" href="" Match="NavLinkMatch.All">
                         <span class="oi oi-home" style="color:mediumaquamarine" aria-hidden="true"></span> Inicio
                     </NavLink>
                 </div>
@@ -23,7 +23,7 @@
         <AuthorizeView Roles="Administrador">
             <Authorized>
                 <div class="nav-item px-3">
-                    <NavLink class="nav-link" style="color:black" href="Usuarios">
+                    <NavLink class="nav-link" style="color:white" href="Usuarios">
                         <span class="oi oi-people" style="color:dodgerblue" aria-hidden="true"></span> Usuarios
                     </NavLink>
                 </div>
@@ -53,7 +53,7 @@
         <AuthorizeView Roles="Administrador, Usuario">
             <Authorized>
                 <div class="nav-item px-3">
-                    <NavLink class="nav-link" style="color:black" href="NuevaFactura">
+                    <NavLink class="nav-link" style="color:white" href="NuevaFactura">
                         <span class="oi oi-layers" style="color:yellow" aria-hidden="true"></span> Reservaciones
                     </NavLink>
                 </div>
@@ -63,7 +63,7 @@
         <AuthorizeView Roles="Administrador">
             <Authorized>
                 <div class="nav-item px-3">
-                    <NavLink class="nav-link" style="color:black" href="Facturas">
+                    <NavLink class="nav-link" style="color:white" href="Facturas">
                         <span class="oi oi-dollar" style="color:green" aria-hidden="true"></span> Facturas
                     </NavLink>
                 </div>
